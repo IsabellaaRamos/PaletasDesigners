@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paletas de Cores</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff69b4;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    input[type="select"], input[type="text"] {
+      padding: 10px 30px ;
+      margin-right: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .colors {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 90px;
+      gap: 10px;
+    }
+
+    .color-box {
+      flex: 1;
+      min-width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🎨 </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Encontre combinações perfeitas de cores</h1>
+    <p>Digite ou escolha uma cor e veja quais combinações funcionam melhor!</p>
+  </section>
+
+  <section class="container">
+    <input type="color" id="colorPicker" value="#ff69b4">
+    <input type="text" id="colorHex" placeholder="#ff69b4">
+    <button onclick="generatePalette()">Gerar Paleta</button>
+
+    <div class="colors" id="paletteOutput"></div>
+  </section>
+
+  <footer>
+    © 2025 Lovable - Feito com 💕 para designers
+  </footer>
+
+   
+ <script src="index.js"></script>
+</body>
+ 
+</html>
+
+
