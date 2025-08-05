@@ -120,6 +120,15 @@
       paletteOutput.appendChild(baseXYZText);
       const baseCMYText = document.createElement("p");
       baseCMYText.innerText = `CMY Text: ${((1 - (h / 360)) * 100).toFixed(1)}%, ${((1 - (s / 100)) * 100).toFixed(1)}%, ${((1 - (l / 100)) * 100).toFixed(1)}%`;
+      paletteOutput.appendChild(baseCMYText);
+      const baseHSVText = document.createElement("p");
+      baseHSVText.innerText = `HSV Text: ${Math.round((h / 360) * 255)}, ${sv.toFixed(1)}%, ${v}`;
+      paletteOutput.appendChild(baseHSVText);
+      const baseHSLBox = document.createElement("div");
+      baseHSLBox.className = "color-box";
+      baseHSLBox.style.backgroundColor = hslToHex(h, s, l);
+      baseHSLBox.innerText = `HSL Box: ${h}, ${s}%, ${l}%`;
+      paletteOutput.appendChild(baseHSLBox);
 
 
 
