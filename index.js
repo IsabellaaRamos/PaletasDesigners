@@ -110,6 +110,19 @@
       baseRGBText.innerText = `RGB Text: ${Math.round((h / 360) * 255)}, ${Math.round((s / 100) * 255)}, ${Math.round((l / 100) * 255)}`;
       paletteOutput.appendChild(baseRGBText);
       const baseCMYKText = document.createElement("p");
+      baseCMYKText.innerText = `CMYK Text: ${((c - k) / (1 - k) * 100).toFixed(1)}%, ${((m - k) / (1 - k) * 100).toFixed(1)}%, ${((y - k) / (1 - k) * 100).toFixed(1)}%, ${k * 100}%`;
+      paletteOutput.appendChild(baseCMYKText);
+      const baseLABText = document.createElement("p");
+      baseLABText.innerText = `LAB Text: ${((116 * y) - 16).toFixed(1)}, ${((x - 50) * 0.396).toFixed(1)}, ${((z - 50) * 0.394).toFixed(1)}`;
+      paletteOutput.appendChild(baseLABText);
+      const baseXYZText = document.createElement("p");
+      baseXYZText.innerText = `XYZ Text: ${((h / 360) * 100).toFixed(1)}, ${((s / 100) * 100).toFixed(1)}, ${((l / 100) * 100).toFixed(1)}`;
+      paletteOutput.appendChild(baseXYZText);
+      const baseCMYText = document.createElement("p");
+      baseCMYText.innerText = `CMY Text: ${((1 - (h / 360)) * 100).toFixed(1)}%, ${((1 - (s / 100)) * 100).toFixed(1)}%, ${((1 - (l / 100)) * 100).toFixed(1)}%`;
+
+
+
 
 
 
