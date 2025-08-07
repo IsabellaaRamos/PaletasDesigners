@@ -75,6 +75,13 @@
       paletteOutput.appendChild(baseBox);
       const baseHSL = document.createElement("p");
       baseHSL.innerText = `HSL: ${h}, ${s}%, ${l}%`;
+      paletteOutput.appendChild(baseHSL);
+      const baseHex = document.createElement("p");
+      baseHex.innerText = `Hex: ${baseColor}`;
+      paletteOutput.appendChild(baseHex);
+
+
+
     
 
 
