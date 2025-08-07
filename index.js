@@ -79,6 +79,15 @@
       const baseHex = document.createElement("p");
       baseHex.innerText = `Hex: ${baseColor}`;
       paletteOutput.appendChild(baseHex);
+      const baseRGB = document.createElement("p");
+      baseRGB.innerText = `RGB: ${parseInt(baseColor.slice(1, 3), 16)}, ${parseInt(baseColor.slice(3, 5), 16)}, ${parseInt(baseColor.slice(5, 7), 16)}`;
+      paletteOutput.appendChild(baseRGB);
+      const baseCMYK = document.createElement("p");
+      const r = parseInt(baseColor.slice(1, 3), 16);
+      const g = parseInt(baseColor.slice(3, 5), 16);
+      const b = parseInt(baseColor.slice(5, 7), 16);
+      const c = 1 - r / 255;
+      const m = 1 - g / 255;
 
 
 
