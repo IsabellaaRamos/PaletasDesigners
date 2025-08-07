@@ -88,6 +88,8 @@
       const b = parseInt(baseColor.slice(5, 7), 16);
       const c = 1 - r / 255;
       const m = 1 - g / 255;
+      const y = 1 - b / 255;
+      const k = Math.min(c, m, y);
 
 
 
