@@ -75,61 +75,7 @@
       paletteOutput.appendChild(baseBox);
       const baseHSL = document.createElement("p");
       baseHSL.innerText = `HSL: ${h}, ${s}%, ${l}%`;
-      paletteOutput.appendChild(baseHSL);
-      const baseRGB = document.createElement("p");
-      baseRGB.innerText = `RGB: ${Math.round((h / 360) * 255)}, ${Math.round((s / 100) * 255)}, ${Math.round((l / 100) * 255)}`;
-      paletteOutput.appendChild(baseRGB);
-      const baseCMYK = document.createElement("p");
-      const c = 1 - (Math.round((h / 360) * 255) / 255);
-      const m = 1 - (Math.round((s / 100) * 255) / 255);
-      const y = 1 - (Math.round((l / 100) * 255) / 255);
-      const k = Math.min(c, m, y);
-      baseCMYK.innerText = `CMYK: ${((c - k) / (1 - k) * 100).toFixed(1)}%, ${((m - k) / (1 - k) * 100).toFixed(1)}%, ${((y - k) / (1 - k) * 100).toFixed(1)}%, ${k * 100}%`;
-      paletteOutput.appendChild(baseCMYK);
-      const baseLAB = document.createElement("p");
-      const x = (h / 360) * 100;
-      const y = (s / 100) * 100;
-      const z = (l / 100) * 100;
-      baseLAB.innerText = `LAB: ${((116 * y) - 16).toFixed(1)}, ${((x - 50) * 0.396).toFixed(1)}, ${((z - 50) * 0.394).toFixed(1)}`;
-      paletteOutput.appendChild(baseLAB);
-      const baseXYZ = document.createElement("p");
-      baseXYZ.innerText = `XYZ: ${((h / 360) * 100).toFixed(1)}, ${((s / 100) * 100).toFixed(1)}, ${((l / 100) * 100).toFixed(1)}`;
-      paletteOutput.appendChild(baseXYZ);
-      const baseCMY = document.createElement("p");
-      baseCMY.innerText = `CMY: ${((1 - (h / 360)) * 100).toFixed(1)}%, ${((1 - (s / 100)) * 100).toFixed(1)}%, ${((1 - (l / 100)) * 100).toFixed(1)}%`;
-      paletteOutput.appendChild(baseCMY);
-      const baseHSV = document.createElement("p");
-      const v = Math.max(Math.round((h / 360) * 255), Math.round((s / 100) * 255), Math.round((l / 100) * 255));
-      const sv = v === 0 ? 0 : ((Math.max(Math.round((h / 360) * 255), Math.round((s / 100) * 255), Math.round((l / 100) * 255)) - Math.min(Math.round((h / 360) * 255), Math.round((s / 100) * 255), Math.round((l / 100) * 255))) / v) * 100;
-      baseHSV.innerText = `HSV: ${Math.round((h / 360) * 255)}, ${sv.toFixed(1)}%, ${v}`;
-      paletteOutput.appendChild(baseHSV);
-      const baseHSLText = document.createElement("p");
-      baseHSLText.innerText = `HSL Text: ${h}, ${s}%, ${l}%`;
-      paletteOutput.appendChild(baseHSLText);
-      const baseRGBText = document.createElement("p");
-      baseRGBText.innerText = `RGB Text: ${Math.round((h / 360) * 255)}, ${Math.round((s / 100) * 255)}, ${Math.round((l / 100) * 255)}`;
-      paletteOutput.appendChild(baseRGBText);
-      const baseCMYKText = document.createElement("p");
-      baseCMYKText.innerText = `CMYK Text: ${((c - k) / (1 - k) * 100).toFixed(1)}%, ${((m - k) / (1 - k) * 100).toFixed(1)}%, ${((y - k) / (1 - k) * 100).toFixed(1)}%, ${k * 100}%`;
-      paletteOutput.appendChild(baseCMYKText);
-      const baseLABText = document.createElement("p");
-      baseLABText.innerText = `LAB Text: ${((116 * y) - 16).toFixed(1)}, ${((x - 50) * 0.396).toFixed(1)}, ${((z - 50) * 0.394).toFixed(1)}`;
-      paletteOutput.appendChild(baseLABText);
-      const baseXYZText = document.createElement("p");
-      baseXYZText.innerText = `XYZ Text: ${((h / 360) * 100).toFixed(1)}, ${((s / 100) * 100).toFixed(1)}, ${((l / 100) * 100).toFixed(1)}`;
-      paletteOutput.appendChild(baseXYZText);
-      const baseCMYText = document.createElement("p");
-      baseCMYText.innerText = `CMY Text: ${((1 - (h / 360)) * 100).toFixed(1)}%, ${((1 - (s / 100)) * 100).toFixed(1)}%, ${((1 - (l / 100)) * 100).toFixed(1)}%`;
-      paletteOutput.appendChild(baseCMYText);
-      const baseHSVText = document.createElement("p");
-      baseHSVText.innerText = `HSV Text: ${Math.round((h / 360) * 255)}, ${sv.toFixed(1)}%, ${v}`;
-      paletteOutput.appendChild(baseHSVText);
-      const baseHSLBox = document.createElement("div");
-      baseHSLBox.className = "color-box";
-      baseHSLBox.style.backgroundColor = hslToHex(h, s, l);
-      baseHSLBox.innerText = `HSL Box: ${h}, ${s}%, ${l}%`;
-      paletteOutput.appendChild(baseHSLBox);
-
+    
 
 
 
