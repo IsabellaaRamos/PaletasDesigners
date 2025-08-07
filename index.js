@@ -108,7 +108,6 @@
         [h, Math.max(s - 10, 0), Math.min(l + 10, 100)],
         [h, Math.min(s + 30, 100), Math.min(l + 30, 100)],
         [h, Math.max(s - 30, 0), Math.max(l - 30, 0)],
-
       ];
 
       combos.forEach(([ch, cs, cl]) => {
@@ -118,12 +117,14 @@
         box.style.backgroundColor = hex;
         box.innerText = hex;
         paletteOutput.appendChild(box);
+     
       });
     }
     document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("generatePalette").addEventListener("click", generatePalette);
       document.getElementById("colorPicker").addEventListener("input", (e) => {
         document.getElementById("colorHex").value = e.target.value;
+            
       });
     });
 
