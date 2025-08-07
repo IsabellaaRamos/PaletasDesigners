@@ -90,8 +90,6 @@
       const m = 1 - g / 255;
       const y = 1 - b / 255;
       const k = Math.min(c, m, y);
-      
-
 
 
 
@@ -109,6 +107,7 @@
         [h, Math.max(s - 10, 0), Math.min(l + 10, 100)],
         [h, Math.min(s + 30, 100), Math.min(l + 30, 100)],
         [h, Math.max(s - 30, 0), Math.max(l - 30, 0)],
+        [h, Math.min(s + 50, 100), Math.min(l + 50, 100)],
         
       ];
 
